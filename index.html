@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hublot</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+	div.gallery {
+  margin: 5px;
+  width: 180px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+</style>
+<body>
+
+<!-- Navigation -->
+<nav class="nabar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#"><img src="hajdee.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item" active>
+					<a class="nav-link" href="#">HOME</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">COLLECTION</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="order.html">ORDER</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contactUs.html">CONTACT US</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!--SlideShow -->
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="hub1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="hub2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="hub3.jpg" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="hub4.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+
+</div>
+
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic" href="https://www.facebook.com/Hublot" white>
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic" href="https://twitter.com/Hublot">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic" href="https://www.instagram.com/hublot/">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic" href="https://www.pinterest.com/hublot/">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 HUBLOT - ALL INTELLECTUAL PROPERTY RIGHTS RESERVED
+  </div>
+  
+
+</footer>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
